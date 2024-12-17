@@ -1,0 +1,9 @@
+@use "./base/index" as base;
+@use "./components/components" as components;
+@use "./pages/home/index" as pages;
+
+[class*="__container"] {
+  max-width: 1190px; // 1160px + 15px + 15px
+  margin: 0 auto;
+  padding: 0 15px;
+}

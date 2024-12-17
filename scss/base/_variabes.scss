@@ -1,0 +1,40 @@
+:root {
+  // #### FONTS ####
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Oswald", sans-serif;
+
+  // #### COLORS ####
+  --primary-color: #333333;
+  --secondary-color: #ffffff;
+  --accent-color: #000000;
+
+  // extra colors
+
+  --bg-decor-lines: #b0b0b0;
+  --bg-site: #f8f8f8;
+
+  //////////////////
+
+  //   --bg-navigation: #fff;
+  //   --bg-footer: #fff;
+
+  //   --text-color: #fff;
+
+  //   --link-color: #fff;
+  //   --bg-link: #fff;
+
+  // #### CAPTION ####
+  --caption-color-light: var(--secondary-color);
+  --caption-color-dark: var(--primary-color);
+  --caption-font: var(--font-secondary);
+  --caption-decor: var(--bg-decor-lines);
+
+  // #### CTA BUTTONS ####
+  --cta-btn-bg-light: var(--bg-site);
+  --cta-btn-bg-dark: var(--accent-color);
+
+  --cta-btn-color-dark: var(--accent-color);
+  --cta-btn-color-light: var(--secondary-color);
+
+  --cta-btn-border-dark: 1px solid var(--primary-color);
+}

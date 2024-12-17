@@ -1,0 +1,10 @@
+h2 {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: clamp(1.875rem, 1.685rem + 0.95vw, 2.375rem); // 38px
+  letter-spacing: calc(
+    38px * 16 / 100
+  ); // font-size(тут вкажи пікселі типу 38px) * 16(це відсотки у фігмі) / 100 (знак відсотку не пиши)
+  font-family: var(--font-secondary);
+  font-weight: 500;
+}
