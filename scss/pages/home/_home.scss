@@ -2,4 +2,76 @@ body {
   //   background-color: palegoldenrod; // гарний тілесний колір
   font-family: var(--font-primary);
   background-color: var(--bg-site);
+  &.lock {
+    overflow: hidden;
+  }
+
+  .header {
+    background-color: var(--header-bg);
+    padding: 17px 0;
+    color: var(--header-color);
+
+    .header__container {
+      display: flex;
+      align-items: center;
+      gap: clamp(1.25rem, -24.583rem + 41.67vw, 8.75rem);
+
+      .header__logo {
+        flex: 0 1 60px;
+        aspect-ratio: 59/65;
+      }
+
+      nav.nav {
+        flex-grow: 1;
+
+        .wrap-navigation {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 15px;
+
+          .mobile__logo {
+            display: none;
+          }
+
+          ul.header__menu {
+            display: flex;
+            gap: clamp(0.938rem, 0.295rem + 3.21vw, 2.625rem); // 42px
+            text-transform: capitalize;
+
+            .menu__item {
+              .menu__link {
+                font-weight: 400;
+                color: var(--header-menu-link);
+              }
+            }
+          }
+
+          .header__socials {
+            display: flex;
+            gap: 15px;
+
+            .socials__item {
+              svg {
+                fill: var(--header-color);
+              }
+            }
+          }
+
+          .header__language {
+            font-weight: 500;
+
+            span:nth-child(2) {
+              margin-right: 12px;
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+
+      .menu__icon {
+        display: none;
+      }
+    }
+  }
 }
