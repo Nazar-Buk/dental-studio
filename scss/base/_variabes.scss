@@ -8,10 +8,15 @@
   --secondary-color: #ffffff;
   --accent-color: #000000;
 
+  --text-color-primary: var(--primary-color);
+  --text-color-secondary: #e6e6e6;
+  
   // extra colors
 
   --bg-decor-lines: #b0b0b0;
   --bg-site: #f8f8f8;
+  --bg-blur-glass-effect: rgba(29, 29, 31, 0.45)
+  ;
 
   //////////////////
 

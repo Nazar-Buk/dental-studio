@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PRYTULA DENTAL STUDIO</title>
     <link rel="stylesheet" href="./scss/main.css" />
+    <!-- ця лінка дуже треба -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -103,8 +108,35 @@
         <div class="menu__icon"><span></span><span></span><span></span></div>
       </div>
     </header>
-    <main>Main</main>
+    <main>
+      <section class="hero">
+        <div class="swiper hero__slider">
+          <div class="swiper-wrapper hero-slide__wrapper">
+            <div class="swiper-slide hero__slide">
+              <img src="./img/hero/hero.png" alt="hero1" />
+            </div>
+            <div class="swiper-slide hero__slide">
+              <img src="./img/hero/hero02.webp" alt="hero2" />
+            </div>
+            <div class="swiper-slide hero__slide">
+              <img src="./img/hero/hero-03.jpg" alt="hero3" />
+            </div>
+            <div class="swiper-slide hero__slide">
+              <img src="./img/hero/hero-04.jpg" alt="hero4" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="hero__board">
+          <h1 class="board__title">PRYTULA</h1>
+          <h3 class="board__sub-title">DENTAL STUDIO</h3>
+          <p>якісні стоматологічні послуги від досвідчених лікарів</p>
+          <a href="" class="cta-button cta-button-dark">Записатись на візит</a>
+        </div>
+      </section>
+    </main>
     <footer>Footer</footer>
+    <script src="./js/swiper.js"></script>
     <script src="./js/home.js"></script>
 
     <!-- COMPONENTS -->
