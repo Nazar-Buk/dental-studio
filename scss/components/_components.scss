@@ -50,14 +50,14 @@
   line-height: 1.06;
   background-color: var(--cta-btn-bg-dark);
   color: var(--cta-btn-color-light);
-  align-self: flex-end;
+  // align-self: flex-end;
   transition: all 0.3s;
-  border: var(--cta-btn-border-light);
+  border: var(--cta-btn-border-dark);
 
   &:hover {
     background-color: var(--cta-btn-bg-light);
     color: var(--cta-btn-color-dark);
-    border: var(--cta-btn-border-dark);
+    border: var(--cta-btn-border-light);
   }
 }
 
