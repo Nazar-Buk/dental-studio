@@ -18,7 +18,7 @@
       display: inline-block;
       height: 1px;
       width: clamp(3.125rem, 0.744rem + 11.9vw, 9.375rem); // 150px
-      background-color: var(--bg-decor-lines);
+      background-color: var(--bg-decor);
     }
 
     &::before {

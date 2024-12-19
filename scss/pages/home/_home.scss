@@ -152,7 +152,7 @@ body {
         min-height: 913px;
 
         .caption {
-          margin-bottom: 70px;
+          margin-bottom: clamp(1.875rem, 1.042rem + 4.17vw, 4.375rem); // 70px
 
           .about-us__title {
           }
@@ -205,6 +205,163 @@ body {
         transform: translateX(-50%);
         bottom: 20px;
         z-index: -1;
+      }
+    }
+
+    section.services {
+      background-color: var(--primary-color);
+
+      .services__container {
+        .services__content {
+          position: relative;
+
+          .caption {
+            margin-bottom: clamp(1.875rem, 0.979rem + 4.48vw, 4.563rem);
+
+            .caption__title {
+              color: var(--caption-color-light);
+            }
+          }
+
+          .wrap__content-blocks {
+            padding-bottom: clamp(1.875rem, 1.25rem + 3.13vw, 3.75rem); // 60px
+            display: flex;
+
+            .content-block__picture {
+              flex: 0 1 642px;
+              aspect-ratio: 642/427;
+
+              img {
+              }
+            }
+
+            .content-block__list {
+              flex-grow: 1;
+              display: flex;
+              justify-content: end;
+
+              ul.list {
+                max-width: 437px;
+                font-weight: 400;
+                font-size: 18px;
+                color: var(--list-items-color);
+
+                li {
+                  list-style-type: disc;
+                  padding: 20px 0;
+
+                  &::marker {
+                    font-size: 20px;
+                  }
+
+                  &:nth-child(even) {
+                    &::marker {
+                      color: var(--bg-decor);
+                    }
+                  }
+
+                  &:nth-child(odd) {
+                    &::marker {
+                      color: var(--accent-color);
+                    }
+                  }
+
+                  .item {
+                    margin-left: 18px;
+                  }
+                }
+              }
+            }
+          }
+
+          .decor-square {
+            position: absolute;
+            right: -11px;
+            bottom: 81px;
+            width: clamp(3.75rem, 2.75rem + 5vw, 6.75rem); // 108
+            aspect-ratio: 108/105;
+            box-shadow: 0 0 15px 0 rgba(197, 197, 197, 0.25);
+          }
+        }
+      }
+    }
+
+    section.services-from {
+      background-color: var(--accent-color);
+
+      .services-form__container {
+        .services__form {
+          padding: clamp(1.875rem, 1.146rem + 3.65vw, 4.063rem) 0
+            clamp(1.875rem, 1.042rem + 4.17vw, 4.375rem); //65px 0 70px
+          color: var(--form-text-color);
+
+          .form__title {
+            margin-bottom: 40px;
+
+            h4 {
+              font-size: 24px;
+              font-weight: 500;
+              margin-bottom: 20px;
+
+              span {
+                color: var(--error-color);
+              }
+            }
+            p {
+            }
+          }
+
+          .form__wrapper {
+            form {
+              display: flex;
+              gap: clamp(0.875rem, -18.3rem + 26vw, 2.5rem); // 40px
+
+              .wrap-inputs {
+                display: flex;
+                gap: clamp(0.875rem, -18.3rem + 26vw, 2.5rem); // 40px
+                align-self: end;
+
+                .wrap-input {
+                  border-bottom: 3px solid var(--input-border-color);
+
+                  input {
+                    border: none;
+                    height: 40px;
+                    width: 260px;
+                    background-color: var(--input-bg);
+                    padding-bottom: 10px;
+                    padding-left: 2px;
+                  }
+                }
+              }
+
+              .wrap-btns {
+                display: flex;
+                gap: clamp(0.875rem, -18.3rem + 26vw, 2.5rem); // 40px
+
+                button {
+                  font-size: 16px;
+                  font-family: var(--font-primary);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 10px;
+
+                  &:last-child {
+                    font-weight: 300;
+
+                    svg {
+                      fill: var(--get-btn-color);
+                    }
+
+                    color: var(--get-btn-color);
+                    background-color: var(--bg-get-btn);
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
