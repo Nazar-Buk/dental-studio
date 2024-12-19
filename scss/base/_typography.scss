@@ -1,10 +1,17 @@
 h2 {
   display: inline-block;
   text-transform: uppercase;
-  font-size: clamp(1.875rem, 1.685rem + 0.95vw, 2.375rem); // 38px
+  font-size: clamp(1.688rem, 1.458rem + 1.15vw, 2.375rem); // 38px
   letter-spacing: calc(
     38px * 16 / 100
   ); // font-size(тут вкажи пікселі типу 38px) * 16(це відсотки у фігмі) / 100 (знак відсотку не пиши)
   font-family: var(--font-secondary);
   font-weight: 500;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.1;
+  color: var(--accent-color);
 }

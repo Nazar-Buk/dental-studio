@@ -103,8 +103,6 @@
 
 @media (max-width: 992px) {
   body {
-    // background-color: red;
-
     .header {
       position: relative;
       z-index: 5;
@@ -283,6 +281,39 @@
 
               img {
                 position: static;
+              }
+            }
+          }
+        }
+      }
+
+      section.advantages {
+        .advantages__decor-square {
+        }
+
+        .advantages__container {
+          .caption {
+          }
+
+          .advantages__content {
+            flex-direction: column;
+            align-items: center;
+
+            .wrap-content__items {
+              &:nth-child(2) {
+              }
+
+              .content__item {
+                .numbers {
+                }
+
+                h5 {
+                }
+
+                p {
+                  &.three {
+                  }
+                }
               }
             }
           }
@@ -499,6 +530,37 @@
           }
         }
       }
+
+      section.advantages {
+        .advantages__decor-square {
+          display: none;
+        }
+
+        .advantages__container {
+          .caption {
+          }
+
+          .advantages__content {
+            .wrap-content__items {
+              &:nth-child(2) {
+              }
+
+              .content__item {
+                .numbers {
+                }
+
+                h5 {
+                }
+
+                p {
+                  &.three {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -612,6 +674,47 @@
                       svg {
                       }
                     }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      section.advantages {
+        .advantages__decor-square {
+        }
+
+        .advantages__container {
+          .caption {
+          }
+
+          .advantages__content {
+            .wrap-content__items {
+              flex-direction: column;
+              text-align: center;
+
+              &:nth-child(2) {
+                gap: 30px;
+              }
+
+              .content__item {
+                // width: 100%;
+
+                .numbers {
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
+
+                h5 {
+                }
+
+                p {
+                  max-width: 100%;
+
+                  &.three {
+                    max-width: 100%;
                   }
                 }
               }

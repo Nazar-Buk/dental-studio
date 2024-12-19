@@ -153,6 +153,7 @@ body {
 
         .caption {
           margin-bottom: clamp(1.875rem, 1.042rem + 4.17vw, 4.375rem); // 70px
+          color: var(--caption-color-dark);
 
           .about-us__title {
           }
@@ -357,6 +358,69 @@ body {
                     color: var(--get-btn-color);
                     background-color: var(--bg-get-btn);
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    section.advantages {
+      position: relative;
+
+      .advantages__decor-square {
+        position: absolute;
+        left: 0;
+        // top: clamp(1.875rem, 0.563rem + 6.56vw, 5.813rem); // 93px
+        top: 93px;
+        width: clamp(3.75rem, 2.833rem + 4.58vw, 6.5rem); //104px
+        aspect-ratio: 104/43;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+      }
+
+      .advantages__container {
+        // border: 1px solid rebeccapurple;
+
+        .caption {
+          margin-bottom: clamp(1.875rem, 1.25rem + 3.13vw, 3.75rem); // 60px
+          color: var(--caption-color-dark);
+        }
+
+        .advantages__content {
+          display: flex;
+          gap: 30px;
+
+          .wrap-content__items {
+            display: flex;
+            gap: 20px;
+
+            &:nth-child(2) {
+              gap: 70px;
+            }
+
+            .content__item {
+              position: relative;
+
+              .numbers {
+                position: absolute;
+                top: 0;
+                left: 5px;
+              }
+
+              h5 {
+                margin-bottom: 30px;
+                padding-top: 20px;
+              }
+
+              p {
+                font-size: 18px;
+                line-height: 1.3;
+                font-weight: 400;
+                max-width: 270px;
+
+                &.three {
+                  max-width: 233px;
                 }
               }
             }
