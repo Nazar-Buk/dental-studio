@@ -3,7 +3,7 @@
 .caption {
   display: flex;
   justify-content: center;
-  margin-top: clamp(1.875rem, -0.196rem + 10.36vw, 7.313rem); // 117px
+  padding-top: clamp(1.875rem, -0.196rem + 10.36vw, 7.313rem); // 117px
 
   .caption__title {
     position: relative;
@@ -32,12 +32,12 @@
 }
 
 ////// BUTTONS /////
-.wrap-btn {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 200px;
-}
+// .wrap-btn {
+//   width: 50%;
+//   display: flex;
+//   justify-content: space-between;
+//   margin-top: 200px;
+// }
 
 .cta-button {
   display: inline-block;

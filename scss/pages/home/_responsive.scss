@@ -147,6 +147,139 @@
           }
         }
       }
+
+      section.about-us {
+        .about-us__container {
+          .caption {
+            .about-us__title {
+            }
+          }
+
+          .about-us__wrap-content {
+            flex-direction: column-reverse;
+            margin-bottom: clamp(2.5rem, 0.714rem + 8.93vw, 6.25rem); // 100px
+
+            .about-us__info {
+              width: 100%;
+
+              p {
+                margin-bottom: 30px;
+                text-align: center;
+              }
+              .cta-button {
+              }
+            }
+
+            .about-us__workers {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              position: static;
+              margin-bottom: clamp(1.875rem, 0.982rem + 4.46vw, 3.75rem); //60px
+
+              img {
+                position: static;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 992px) {
+  body {
+    main {
+      section.about-us {
+        .about-us__container {
+          .caption {
+            .about-us__title {
+            }
+          }
+
+          .about-us__wrap-content {
+            .about-us__info {
+              p {
+              }
+              .cta-button {
+              }
+            }
+
+            .about-us__workers {
+              img {
+                top: calc(
+                  27px + (150 - 27) * ((1280px - 100vw) / (1280 - 992))
+                ); // тут я збільшую top від 27px до 150px, коли екран зменшується, також не забуть поставити top: 27px на звичайному scss файлі
+                // заптай у gpt
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    main {
+      section.about-us {
+        .about-us__container {
+          .caption {
+            .about-us__title {
+            }
+          }
+
+          .about-us__wrap-content {
+            .about-us__info {
+              p {
+              }
+              .cta-button {
+              }
+            }
+
+            .about-us__workers {
+              img {
+                max-width: 700px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 992px) {
+  body {
+    main {
+      section.about-us {
+        padding-bottom: 150px;
+
+        .about-us__container {
+          .caption {
+            .about-us__title {
+            }
+          }
+
+          .about-us__wrap-content {
+            .about-us__info {
+              p {
+                padding-right: 45px;
+              }
+              .cta-button {
+              }
+            }
+
+            .about-us__workers {
+              img {
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -182,6 +315,33 @@
           }
         }
       }
+
+      section.about-us {
+        .about-us__container {
+          .caption {
+            .about-us__title {
+            }
+          }
+
+          .about-us__wrap-content {
+            .about-us__info {
+              p {
+              }
+              .cta-button {
+              }
+            }
+
+            .about-us__workers {
+              img {
+              }
+            }
+          }
+        }
+
+        .about-us__deco-square {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -211,6 +371,33 @@
           }
 
           .cta-button-dark {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 565px) {
+  section.about-us {
+    .about-us__container {
+      .caption {
+        .about-us__title {
+        }
+      }
+
+      .about-us__wrap-content {
+        .about-us__info {
+          p {
+          }
+          .cta-button {
+            display: block;
+            text-align: center;
+          }
+        }
+
+        .about-us__workers {
+          img {
           }
         }
       }
