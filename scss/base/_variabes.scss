@@ -13,10 +13,16 @@
   
   // extra colors
 
-  --bg-decor-lines: #b0b0b0;
+  --bg-decor: #b0b0b0;
   --bg-site: #f8f8f8;
-  --bg-blur-glass-effect: rgba(29, 29, 31, 0.45)
-  ;
+  --bg-blur-glass-effect: rgba(29, 29, 31, 0.45);
+  
+  --list-items-color: #dddddd;
+  --form-text-color: #fefefe;
+  --error-color: #f20000;
+  
+  --bg-get-btn: #5f5c5c;
+  --get-btn-color: var(--secondary-color);
 
   //////////////////
 
@@ -38,7 +44,7 @@
   --caption-color-light: var(--secondary-color);
   --caption-color-dark: var(--primary-color);
   --caption-font: var(--font-secondary);
-  --caption-decor: var(--bg-decor-lines);
+  --caption-decor: var(--bg-decor);
 
   // #### CTA BUTTONS ####
   --cta-btn-bg-light: var(--bg-site);
@@ -49,4 +55,14 @@
 
   --cta-btn-border-dark: 1px solid var(--primary-color);
   --cta-btn-border-light: 1px solid var(--secondary-color);
+
+
+  // #### INPUT ####
+
+  --input-text-color: var(--secondary-color);
+  --input-border-color: var(--secondary-color);
+  --input-placeholder-color: var(--bg-decor);
+
+  --input-bg: var(--accent-color);
+
 }

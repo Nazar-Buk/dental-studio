@@ -126,9 +126,14 @@ a {
   --accent-color: #000000;
   --text-color-primary: var(--primary-color);
   --text-color-secondary: #e6e6e6;
-  --bg-decor-lines: #b0b0b0;
+  --bg-decor: #b0b0b0;
   --bg-site: #f8f8f8;
-  --bg-blur-glass-effect: rgba(29, 29, 31, 0.45) ;
+  --bg-blur-glass-effect: rgba(29, 29, 31, 0.45);
+  --list-items-color: #dddddd;
+  --form-text-color: #fefefe;
+  --error-color: #f20000;
+  --bg-get-btn: #5f5c5c;
+  --get-btn-color: var(--secondary-color);
   --header-bg: var(--primary-color);
   --header-color: var(--secondary-color);
   --header-menu-link: var(--secondary-color)
@@ -136,13 +141,17 @@ a {
   --caption-color-light: var(--secondary-color);
   --caption-color-dark: var(--primary-color);
   --caption-font: var(--font-secondary);
-  --caption-decor: var(--bg-decor-lines);
+  --caption-decor: var(--bg-decor);
   --cta-btn-bg-light: var(--bg-site);
   --cta-btn-bg-dark: var(--accent-color);
   --cta-btn-color-dark: var(--accent-color);
   --cta-btn-color-light: var(--secondary-color);
   --cta-btn-border-dark: 1px solid var(--primary-color);
   --cta-btn-border-light: 1px solid var(--secondary-color);
+  --input-text-color: var(--secondary-color);
+  --input-border-color: var(--secondary-color);
+  --input-placeholder-color: var(--bg-decor);
+  --input-bg: var(--accent-color);
 }
 
 h2 {
@@ -171,7 +180,7 @@ h2 {
   display: inline-block;
   height: 1px;
   width: clamp(3.125rem, 0.744rem + 11.9vw, 9.375rem);
-  background-color: var(--bg-decor-lines);
+  background-color: var(--bg-decor);
 }
 .caption .caption__title::before {
   left: calc(-1 * clamp(3.125rem, 0.744rem + 11.9vw, 9.375rem));
@@ -340,7 +349,7 @@ body main section.about-us .about-us__container {
   min-height: 913px;
 }
 body main section.about-us .about-us__container .caption {
-  margin-bottom: 70px;
+  margin-bottom: clamp(1.875rem, 1.042rem + 4.17vw, 4.375rem);
 }
 body main section.about-us .about-us__container .about-us__wrap-content {
   display: flex;
@@ -381,7 +390,147 @@ body main section.about-us .about-us__deco-arrow {
   bottom: 20px;
   z-index: -1;
 }
+body main section.services {
+  background-color: var(--primary-color);
+}
+body main section.services .services__container .services__content {
+  position: relative;
+}
+body main section.services .services__container .services__content .caption {
+  margin-bottom: clamp(1.875rem, 0.979rem + 4.48vw, 4.563rem);
+}
+body main section.services .services__container .services__content .caption .caption__title {
+  color: var(--caption-color-light);
+}
+body main section.services .services__container .services__content .wrap__content-blocks {
+  padding-bottom: clamp(1.875rem, 1.25rem + 3.13vw, 3.75rem);
+  display: flex;
+}
+body main section.services .services__container .services__content .wrap__content-blocks .content-block__picture {
+  flex: 0 1 642px;
+  aspect-ratio: 642/427;
+}
+body main section.services .services__container .services__content .wrap__content-blocks .content-block__list {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+}
+body main section.services .services__container .services__content .wrap__content-blocks .content-block__list ul.list {
+  max-width: 437px;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--list-items-color);
+}
+body main section.services .services__container .services__content .wrap__content-blocks .content-block__list ul.list li {
+  list-style-type: disc;
+  padding: 20px 0;
+}
+body main section.services .services__container .services__content .wrap__content-blocks .content-block__list ul.list li::marker {
+  font-size: 20px;
+}
+body main section.services .services__container .services__content .wrap__content-blocks .content-block__list ul.list li:nth-child(even)::marker {
+  color: var(--bg-decor);
+}
+body main section.services .services__container .services__content .wrap__content-blocks .content-block__list ul.list li:nth-child(odd)::marker {
+  color: var(--accent-color);
+}
+body main section.services .services__container .services__content .wrap__content-blocks .content-block__list ul.list li .item {
+  margin-left: 18px;
+}
+body main section.services .services__container .services__content .decor-square {
+  position: absolute;
+  right: -11px;
+  bottom: 81px;
+  width: clamp(3.75rem, 2.75rem + 5vw, 6.75rem);
+  aspect-ratio: 108/105;
+  box-shadow: 0 0 15px 0 rgba(197, 197, 197, 0.25);
+}
+body main section.services-from {
+  background-color: var(--accent-color);
+}
+body main section.services-from .services-form__container .services__form {
+  padding: clamp(1.875rem, 1.146rem + 3.65vw, 4.063rem) 0 clamp(1.875rem, 1.042rem + 4.17vw, 4.375rem);
+  color: var(--form-text-color);
+}
+body main section.services-from .services-form__container .services__form .form__title {
+  margin-bottom: 40px;
+}
+body main section.services-from .services-form__container .services__form .form__title h4 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+body main section.services-from .services-form__container .services__form .form__title h4 span {
+  color: var(--error-color);
+}
+body main section.services-from .services-form__container .services__form .form__wrapper form {
+  display: flex;
+  gap: clamp(0.875rem, -18.3rem + 26vw, 2.5rem);
+}
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs {
+  display: flex;
+  gap: clamp(0.875rem, -18.3rem + 26vw, 2.5rem);
+  align-self: end;
+}
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs .wrap-input {
+  border-bottom: 3px solid var(--input-border-color);
+}
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs .wrap-input input {
+  border: none;
+  height: 40px;
+  width: 260px;
+  background-color: var(--input-bg);
+  padding-bottom: 10px;
+  padding-left: 2px;
+}
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns {
+  display: flex;
+  gap: clamp(0.875rem, -18.3rem + 26vw, 2.5rem);
+}
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button {
+  font-size: 16px;
+  font-family: var(--font-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button:last-child {
+  font-weight: 300;
+  color: var(--get-btn-color);
+  background-color: var(--bg-get-btn);
+}
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button:last-child svg {
+  fill: var(--get-btn-color);
+}
 
+@media (max-width: 1100px) {
+  body main section.services .services__container .services__content .wrap__content-blocks {
+    flex-direction: column;
+  }
+  body main section.services .services__container .services__content .wrap__content-blocks .content-block__picture {
+    flex: 0 1 auto;
+  }
+  body main section.services .services__container .services__content .wrap__content-blocks .content-block__list {
+    margin-top: 50px;
+    justify-content: center;
+  }
+  body main section.services-from .services-form__container .services__form .form__title {
+    text-align: center;
+  }
+  body main section.services-from .services-form__container .services__form .form__wrapper form {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs {
+    align-self: center;
+  }
+  body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
 @media (max-width: 992px) {
   body .header {
     position: relative;
@@ -530,10 +679,33 @@ body main section.about-us .about-us__deco-arrow {
     height: 100vh;
   }
 }
+@media (max-width: 640px) {
+  body main .caption .caption__title::before, body main .caption .caption__title::after {
+    content: "";
+    display: none;
+  }
+}
 @media (max-width: 565px) {
-  section.about-us .about-us__container .about-us__wrap-content .about-us__info .cta-button {
+  body main section.about-us .about-us__container .about-us__wrap-content .about-us__info .cta-button {
     display: block;
     text-align: center;
+  }
+  body main section.services .services__container .services__content .wrap__content-blocks .content-block__list ul.list {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs {
+    flex-direction: column;
+    width: 100%;
+  }
+  body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs .wrap-input input {
+    width: 100%;
+  }
+  body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns {
+    flex-direction: column;
+  }
+  body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button {
+    font-size: 15px;
   }
 }
 [class*=__container] {
