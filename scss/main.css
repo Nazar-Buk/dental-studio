@@ -637,6 +637,27 @@ body main section.reviews .reviews__container .cta-button {
   margin-top: 40px;
   display: inline-flex;
 }
+body main section.clients {
+  padding-top: clamp(1.875rem, 9.38vw, 7.5rem);
+  padding-bottom: clamp(1.875rem, 9.38vw, 7.5rem);
+  background-image: url("../../../img/clients/clients.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body main section.clients .clients__container .wrap-client-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.25rem, 0.833rem + 2.08vw, 2.5rem);
+  justify-content: center;
+}
+body main section.clients .clients__container .wrap-client-images .wrap-clients-img {
+  flex: 0 1 360px;
+  aspect-ratio: 360/305;
+}
+body main section.clients .clients__container .wrap-client-images .wrap-clients-img img {
+  max-width: none;
+  width: 100%;
+}
 
 @media (max-width: 1100px) {
   body main section.services .services__container .services__content .wrap__content-blocks {
