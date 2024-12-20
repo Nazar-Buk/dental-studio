@@ -129,7 +129,7 @@
           .wrap-navigation {
             flex-direction: column;
             height: 100%;
-            width: 70%;
+            width: 80%;
             background-color: var(--header-bg);
             border-right: 1px solid gold;
             justify-content: start;
@@ -476,6 +476,49 @@
           display: none;
         }
       }
+
+      section.reviews {
+        .reviews__container {
+          .caption {
+          }
+
+          .reviews__wrap-cards {
+            .reviews__card {
+              text-align: center;
+
+              .card__user-info {
+                .wrap-user-photo {
+                  img {
+                  }
+                }
+
+                .username {
+                }
+              }
+
+              p.card__text {
+                &:first-child {
+                }
+              }
+
+              .card__social {
+                svg {
+                }
+              }
+            }
+          }
+          .accordion-btn {
+            &:hover {
+            }
+
+            svg {
+            }
+          }
+
+          .cta-button {
+          }
+        }
+      }
     }
   }
 }
@@ -719,6 +762,57 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    main {
+      section.reviews {
+        .reviews__container {
+          .caption {
+            text-align: center;
+          }
+
+          .reviews__wrap-cards {
+            .reviews__card {
+              width: auto;
+
+              .card__user-info {
+                .wrap-user-photo {
+                  img {
+                  }
+                }
+
+                .username {
+                }
+              }
+
+              p.card__text {
+                &:first-child {
+                }
+              }
+
+              .card__social {
+                svg {
+                }
+              }
+            }
+          }
+          .accordion-btn {
+            &:hover {
+            }
+
+            svg {
+              display: none;
+            }
+          }
+
+          .cta-button {
           }
         }
       }
