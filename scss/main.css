@@ -153,6 +153,10 @@ a {
   --input-border-color: var(--secondary-color);
   --input-placeholder-color: var(--bg-decor);
   --input-bg: var(--accent-color);
+  --footer-color-primary: var(--secondary-color);
+  --footer-color-secondary: var(--bg-decor);
+  --footer-bg: var(--accent-color);
+  --footer-fz: 18px;
 }
 
 h2 {
@@ -714,6 +718,62 @@ body main section.discount .discount__container .discount__content .discount__in
   font-weight: 500;
   line-height: 1.33;
 }
+body footer.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-color-primary);
+  font-size: var(--footer-fz);
+  font-weight: 500;
+}
+body footer.footer .footer__container {
+  padding-top: clamp(1.875rem, 0.625rem + 6.25vw, 5.625rem);
+  padding-bottom: clamp(1.875rem, 0.625rem + 6.25vw, 5.625rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.25rem, -6.042rem + 14.58vw, 5.625rem);
+  align-items: center;
+}
+body footer.footer .footer__container .footer__left-box {
+  display: flex;
+  gap: clamp(1.25rem, -17.5rem + 37.5vw, 12.5rem);
+  align-items: center;
+}
+body footer.footer .footer__container .footer__left-box .footer__address .address {
+  margin-bottom: 25px;
+}
+body footer.footer .footer__container .footer__left-box .footer__address .google__link {
+  color: var(--footer-color-secondary);
+  font-size: 16px;
+}
+body footer.footer .footer__container .footer__left-box .footer__address .google__link:hover {
+  text-decoration: underline;
+}
+body footer.footer .footer__container .footer__right-box {
+  display: flex;
+  gap: clamp(1.25rem, -8.125rem + 18.75vw, 6.875rem);
+  align-items: center;
+}
+body footer.footer .footer__container .footer__right-box .footer__timetable {
+  line-height: 1.77;
+}
+body footer.footer .footer__container .footer__right-box .footer__timetable span {
+  width: 77px;
+  color: var(--footer-color-secondary);
+  margin-right: 11px;
+}
+body footer.footer .footer__container .footer__right-box .footer__timetable span:first-child {
+  margin-right: 6px;
+}
+body footer.footer .footer__container .footer__right-box .footer__info .footer-info__tel {
+  color: var(--footer-color-primary);
+}
+body footer.footer .footer__container .footer__right-box .footer__info .footer-info__email {
+  margin-top: 11px;
+  margin-bottom: 17px;
+}
+body footer.footer .footer__container .footer__right-box .footer__info .footer-info__socials {
+  display: inline-flex;
+  gap: 10px;
+}
 @media (min-width: 1440px) {
   body main section.discount .discount__container .discount__content {
     justify-content: space-between;
@@ -887,6 +947,31 @@ body main section.discount .discount__container .discount__content .discount__in
   body main section.discount .discount__container .discount__content .discount__info .info__wrapper-content p {
     font-size: clamp(1.125rem, 0.946rem + 0.89vw, 1.5rem);
   }
+  body footer.footer .footer__container {
+    gap: 30px;
+  }
+  body footer.footer .footer__container .footer__left-box {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  body footer.footer .footer__container .footer__left-box .footer__logo {
+    width: 215px;
+  }
+  body footer.footer .footer__container .footer__left-box .footer__address .address {
+    width: 215px;
+  }
+  body footer.footer .footer__container .footer__right-box {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  body footer.footer .footer__container .footer__right-box .footer__timetable {
+    width: 215px;
+  }
+  body footer.footer .footer__container .footer__right-box .footer__info .footer-info__socials {
+    width: 215px;
+  }
 }
 @media (max-width: 1280px) and (min-width: 992px) {
   body main section.about-us .about-us__container .about-us__wrap-content .about-us__workers img {
@@ -984,6 +1069,18 @@ body main section.discount .discount__container .discount__content .discount__in
   }
   body main section.reviews .reviews__container .accordion-btn svg {
     display: none;
+  }
+  body footer.footer .footer__container .footer__left-box {
+    text-align: center;
+  }
+  body footer.footer .footer__container .footer__right-box {
+    text-align: center;
+  }
+  body footer.footer .footer__container .footer__right-box .footer__info .footer-info__socials {
+    justify-content: center;
+  }
+  body footer.footer .footer__container .footer__right-box .footer__info .footer-info__socials a img {
+    width: 40px;
   }
 }
 [class*=__container] {

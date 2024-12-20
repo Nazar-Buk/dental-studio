@@ -402,6 +402,68 @@
         }
       }
     }
+
+    footer.footer {
+      .footer__container {
+        gap: 30px;
+
+        .footer__left-box {
+          width: 100%;
+          justify-content: space-around;
+          flex-wrap: wrap;
+
+          .footer__logo {
+            width: 215px;
+
+            img {
+            }
+          }
+
+          .footer__address {
+            .address {
+              width: 215px;
+            }
+
+            .google__link {
+              &:hover {
+              }
+            }
+          }
+        }
+
+        .footer__right-box {
+          width: 100%;
+          justify-content: space-around;
+          flex-wrap: wrap;
+
+          .footer__timetable {
+            width: 215px;
+
+            span {
+              &:first-child {
+              }
+            }
+          }
+
+          .footer__info {
+            .footer-info__tel {
+            }
+
+            .footer-info__email {
+            }
+
+            .footer-info__socials {
+              width: 215px;
+
+              a {
+                img {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -895,6 +957,58 @@
           }
 
           .cta-button {
+          }
+        }
+      }
+    }
+
+    footer.footer {
+      .footer__container {
+        .footer__left-box {
+          text-align: center;
+
+          .footer__logo {
+            img {
+            }
+          }
+
+          .footer__address {
+            .address {
+            }
+
+            .google__link {
+              &:hover {
+              }
+            }
+          }
+        }
+
+        .footer__right-box {
+          text-align: center;
+
+          .footer__timetable {
+            span {
+              &:first-child {
+              }
+            }
+          }
+
+          .footer__info {
+            .footer-info__tel {
+            }
+
+            .footer-info__email {
+            }
+
+            .footer-info__socials {
+              justify-content: center;
+
+              a {
+                img {
+                  width: 40px;
+                }
+              }
+            }
           }
         }
       }
