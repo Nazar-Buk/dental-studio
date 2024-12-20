@@ -513,6 +513,7 @@ body main section.services-from .services-form__container .services__form .form_
 }
 body main section.advantages {
   position: relative;
+  padding-bottom: clamp(1.875rem, 0.104rem + 8.85vw, 7.188rem);
 }
 body main section.advantages .advantages__decor-square {
   position: absolute;
@@ -557,6 +558,84 @@ body main section.advantages .advantages__container .advantages__content .wrap-c
 }
 body main section.advantages .advantages__container .advantages__content .wrap-content__items .content__item p.three {
   max-width: 233px;
+}
+body main section.reviews {
+  background-color: var(--primary-color);
+  padding-bottom: clamp(1.875rem, -0.083rem + 9.79vw, 7.75rem);
+}
+body main section.reviews .reviews__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main section.reviews .reviews__container .caption {
+  color: var(--caption-color-light);
+  padding-bottom: clamp(1.875rem, 1.042rem + 4.17vw, 4.375rem);
+}
+body main section.reviews .reviews__container .reviews__wrap-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(1.25rem, -9.808rem + 15.38vw, 2.5rem);
+  margin-bottom: 44px;
+}
+body main section.reviews .reviews__container .reviews__wrap-cards .reviews__card {
+  width: 360px;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  padding: 30px 10px 12px 30px;
+  display: flex;
+  flex-direction: column;
+}
+body main section.reviews .reviews__container .reviews__wrap-cards .reviews__card .card__user-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+body main section.reviews .reviews__container .reviews__wrap-cards .reviews__card .card__user-info .username {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--accent-color);
+}
+body main section.reviews .reviews__container .reviews__wrap-cards .reviews__card p.card__text {
+  font-size: 16px;
+  max-width: 321px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--primary-color);
+  margin-top: 24px;
+}
+body main section.reviews .reviews__container .reviews__wrap-cards .reviews__card p.card__text:first-child {
+  max-width: 268px;
+}
+body main section.reviews .reviews__container .reviews__wrap-cards .reviews__card .card__social {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+body main section.reviews .reviews__container .accordion-btn {
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--secondary-color);
+  position: relative;
+  padding: 0 20px;
+  cursor: pointer;
+}
+body main section.reviews .reviews__container .accordion-btn:hover {
+  text-decoration: underline;
+}
+body main section.reviews .reviews__container .accordion-btn svg {
+  position: absolute;
+  left: -76px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body main section.reviews .reviews__container .cta-button {
+  margin-top: 40px;
+  display: inline-flex;
 }
 
 @media (max-width: 1100px) {
@@ -609,7 +688,7 @@ body main section.advantages .advantages__container .advantages__content .wrap-c
   body .header .header__container nav.nav .wrap-navigation {
     flex-direction: column;
     height: 100%;
-    width: 70%;
+    width: 80%;
     background-color: var(--header-bg);
     border-right: 1px solid gold;
     justify-content: start;
@@ -732,6 +811,9 @@ body main section.advantages .advantages__container .advantages__content .wrap-c
   body main section.about-us .about-us__deco-square {
     display: none;
   }
+  body main section.reviews .reviews__container .reviews__wrap-cards .reviews__card {
+    text-align: center;
+  }
 }
 @media (max-width: 768px) and (max-height: 600px) {
   body main section.hero .swiper.hero__slider .swiper-wrapper.hero-slide__wrapper .swiper-slide.hero__slide img {
@@ -785,6 +867,17 @@ body main section.advantages .advantages__container .advantages__content .wrap-c
   }
   body main section.advantages .advantages__container .advantages__content .wrap-content__items .content__item p.three {
     max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  body main section.reviews .reviews__container .caption {
+    text-align: center;
+  }
+  body main section.reviews .reviews__container .reviews__wrap-cards .reviews__card {
+    width: auto;
+  }
+  body main section.reviews .reviews__container .accordion-btn svg {
+    display: none;
   }
 }
 [class*=__container] {

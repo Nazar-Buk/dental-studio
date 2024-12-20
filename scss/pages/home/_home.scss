@@ -2,6 +2,7 @@ body {
   //   background-color: palegoldenrod; // гарний тілесний колір
   font-family: var(--font-primary);
   background-color: var(--bg-site);
+
   &.lock {
     overflow: hidden;
   }
@@ -368,11 +369,11 @@ body {
 
     section.advantages {
       position: relative;
+      padding-bottom: clamp(1.875rem, 0.104rem + 8.85vw, 7.188rem); // 115px
 
       .advantages__decor-square {
         position: absolute;
         left: 0;
-        // top: clamp(1.875rem, 0.563rem + 6.56vw, 5.813rem); // 93px
         top: 93px;
         width: clamp(3.75rem, 2.833rem + 4.58vw, 6.5rem); //104px
         aspect-ratio: 104/43;
@@ -380,8 +381,6 @@ body {
       }
 
       .advantages__container {
-        // border: 1px solid rebeccapurple;
-
         .caption {
           margin-bottom: clamp(1.875rem, 1.25rem + 3.13vw, 3.75rem); // 60px
           color: var(--caption-color-dark);
@@ -425,6 +424,106 @@ body {
               }
             }
           }
+        }
+      }
+    }
+
+    section.reviews {
+      background-color: var(--primary-color);
+      padding-bottom: clamp(1.875rem, -0.083rem + 9.79vw, 7.75rem); // 124px
+
+      .reviews__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .caption {
+          color: var(--caption-color-light);
+          padding-bottom: clamp(1.875rem, 1.042rem + 4.17vw, 4.375rem); // 70px
+        }
+
+        .reviews__wrap-cards {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: clamp(1.25rem, -9.808rem + 15.38vw, 2.5rem); // 40px
+          margin-bottom: 44px;
+
+          .reviews__card {
+            width: 360px;
+            background-color: var(--secondary-color);
+            border-radius: 20px;
+            padding: 30px 10px 12px 30px;
+            display: flex;
+            flex-direction: column;
+
+            .card__user-info {
+              display: flex;
+              align-items: center;
+              gap: 18px;
+
+              .wrap-user-photo {
+                img {
+                }
+              }
+
+              .username {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 1.1;
+                color: var(--accent-color);
+              }
+            }
+
+            p.card__text {
+              font-size: 16px;
+
+              &:first-child {
+                max-width: 268px;
+              }
+
+              max-width: 321px;
+              font-weight: 400;
+              line-height: 1.5;
+              color: var(--primary-color);
+              margin-top: 24px;
+            }
+
+            .card__social {
+              flex: 1;
+              display: flex;
+              justify-content: end;
+              align-items: end;
+
+              svg {
+              }
+            }
+          }
+        }
+        .accordion-btn {
+          display: inline-flex;
+          font-size: 18px;
+          font-weight: 500;
+          color: var(--secondary-color);
+          position: relative;
+          padding: 0 20px;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          svg {
+            position: absolute;
+            left: -76px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
+        .cta-button {
+          margin-top: 40px;
+          display: inline-flex;
         }
       }
     }
