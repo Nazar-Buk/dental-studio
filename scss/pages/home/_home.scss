@@ -527,5 +527,32 @@ body {
         }
       }
     }
+
+    section.clients {
+      padding-top: clamp(1.875rem, 9.38vw, 7.5rem);
+      padding-bottom: clamp(1.875rem, 9.38vw, 7.5rem);
+      background-image: url("../../../img/clients/clients.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .clients__container {
+        .wrap-client-images {
+          display: flex;
+          flex-wrap: wrap;
+          gap: clamp(1.25rem, 0.833rem + 2.08vw, 2.5rem); // 40px
+          justify-content: center;
+
+          .wrap-clients-img {
+            flex: 0 1 360px;
+            aspect-ratio: 360/305;
+
+            img {
+              max-width: none;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
   }
 }
