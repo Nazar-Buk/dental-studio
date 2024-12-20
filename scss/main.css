@@ -132,6 +132,7 @@ a {
   --list-items-color: #dddddd;
   --form-text-color: #fefefe;
   --error-color: #f20000;
+  --percent-color: rgba(255, 23, 23, 0.7);
   --bg-get-btn: #5f5c5c;
   --get-btn-color: var(--secondary-color);
   --header-bg: var(--primary-color);
@@ -146,7 +147,7 @@ a {
   --cta-btn-bg-dark: var(--accent-color);
   --cta-btn-color-dark: var(--accent-color);
   --cta-btn-color-light: var(--secondary-color);
-  --cta-btn-border-dark: 1px solid var(--primary-color);
+  --cta-btn-border-dark: 1px solid var(--accent-color);
   --cta-btn-border-light: 1px solid var(--secondary-color);
   --input-text-color: var(--secondary-color);
   --input-border-color: var(--secondary-color);
@@ -658,7 +659,66 @@ body main section.clients .clients__container .wrap-client-images .wrap-clients-
   max-width: none;
   width: 100%;
 }
-
+body main section.discount {
+  position: relative;
+}
+body main section.discount img {
+  width: 100%;
+  height: 100%;
+  height: 733px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main section.discount .discount__mask {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(3, 3, 3, 0.75);
+}
+body main section.discount .discount__container {
+  position: absolute;
+  inset: 0;
+  padding-top: clamp(1.875rem, 9.38vw, 7.5rem);
+  padding-bottom: clamp(1.875rem, 0.417rem + 7.29vw, 6.25rem);
+}
+body main section.discount .discount__container .discount__title {
+  font-size: 105px;
+  font-weight: 700;
+  color: #d6d6d6;
+  mix-blend-mode: color-dodge;
+  margin-bottom: clamp(1.875rem, 0.417rem + 7.29vw, 6.25rem);
+}
+body main section.discount .discount__container .discount__content {
+  display: flex;
+  gap: clamp(1.875rem, -21.806rem + 38.19vw, 8.75rem);
+  flex-wrap: wrap;
+}
+body main section.discount .discount__container .discount__content .discount_percent span {
+  font-size: 100px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--percent-color);
+}
+body main section.discount .discount__container .discount__content .discount__info .info__wrapper-content h4 {
+  color: var(--secondary-color);
+  line-height: 1.05;
+  font-size: 48px;
+  font-weight: 500;
+  max-width: 560px;
+}
+body main section.discount .discount__container .discount__content .discount__info .info__wrapper-content p {
+  margin-top: 37px;
+  margin-bottom: 46px;
+  max-width: 410px;
+  color: var(--text-color-secondary);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.33;
+}
+@media (min-width: 1440px) {
+  body main section.discount .discount__container .discount__content {
+    justify-content: space-between;
+  }
+}
 @media (max-width: 1100px) {
   body main section.services .services__container .services__content .wrap__content-blocks {
     flex-direction: column;
@@ -801,6 +861,31 @@ body main section.clients .clients__container .wrap-client-images .wrap-clients-
   body main section.advantages .advantages__container .advantages__content {
     flex-direction: column;
     align-items: center;
+  }
+  body main section.discount img {
+    height: clamp(37.5rem, 27.679rem + 49.11vw, 58.125rem);
+  }
+  body main section.discount .discount__container .discount__title {
+    text-align: center;
+    font-size: clamp(3.125rem, 1.488rem + 8.18vw, 6.563rem);
+  }
+  body main section.discount .discount__container .discount__content {
+    flex-direction: column;
+    align-items: center;
+  }
+  body main section.discount .discount__container .discount__content .discount__info {
+    text-align: center;
+  }
+  body main section.discount .discount__container .discount__content .discount__info .info__wrapper-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main section.discount .discount__container .discount__content .discount__info .info__wrapper-content h4 {
+    font-size: clamp(1.75rem, 1.155rem + 2.98vw, 3rem);
+  }
+  body main section.discount .discount__container .discount__content .discount__info .info__wrapper-content p {
+    font-size: clamp(1.125rem, 0.946rem + 0.89vw, 1.5rem);
   }
 }
 @media (max-width: 1280px) and (min-width: 992px) {
