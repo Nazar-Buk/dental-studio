@@ -554,5 +554,75 @@ body {
         }
       }
     }
+
+    section.discount {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        height: 733px;
+        object-fit: cover;
+      }
+
+      .discount__mask {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(3, 3, 3, 0.75);
+      }
+
+      .discount__container {
+        position: absolute;
+        inset: 0; // дууже  допомогло виставити все по обмежуючому контейнеру
+
+        padding-top: clamp(1.875rem, 9.38vw, 7.5rem); // 120px
+        padding-bottom: clamp(1.875rem, 0.417rem + 7.29vw, 6.25rem); // 100px
+
+        .discount__title {
+          font-size: 105px;
+          font-weight: 700;
+          color: #d6d6d6; // це піздєц як важливо, має бути саме колір #d6d6d6
+          mix-blend-mode: color-dodge;
+          margin-bottom: clamp(1.875rem, 0.417rem + 7.29vw, 6.25rem);
+        }
+
+        .discount__content {
+          display: flex;
+          gap: clamp(1.875rem, -21.806rem + 38.19vw, 8.75rem); // 140px
+          flex-wrap: wrap;
+
+          .discount_percent {
+            span {
+              font-size: 100px;
+              line-height: 1.3;
+              font-weight: 700;
+              color: var(--percent-color);
+            }
+          }
+          .discount__info {
+            .info__wrapper-content {
+              h4 {
+                color: var(--secondary-color);
+                line-height: 1.05;
+                font-size: 48px;
+                font-weight: 500;
+                max-width: 560px;
+              }
+              p {
+                margin-top: 37px;
+                margin-bottom: 46px;
+                max-width: 410px;
+                color: var(--text-color-secondary);
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 1.33;
+              }
+              .cta-button {
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
