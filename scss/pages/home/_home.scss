@@ -42,6 +42,8 @@ body {
             text-transform: capitalize;
 
             .menu__item {
+              cursor: pointer;
+
               .menu__link {
                 font-weight: 400;
                 color: var(--header-menu-link);
@@ -693,6 +695,9 @@ body {
           .footer-info__email {
             margin-top: 11px;
             margin-bottom: 17px;
+            a {
+              color: var(--footer-color-primary);
+            }
           }
 
           .footer-info__socials {
