@@ -13,6 +13,12 @@
     />
   </head>
   <body>
+    <div class="loadingScreen">
+      <div class="loadingScreen__image">
+        <img src="./img/loader01.png" alt="loader" />
+      </div>
+      <div>Loading...</div>
+    </div>
     <header class="header">
       <div class="header__container">
         <div class="header__logo"><img src="./img/logo.png" alt="logo" /></div>
@@ -225,7 +231,7 @@
               </p>
             </div>
             <div class="form__wrapper">
-              <form action="">
+              <form id="form">
                 <div class="wrap-inputs">
                   <div class="wrap-input">
                     <input
@@ -233,15 +239,15 @@
                       id="name"
                       name="name"
                       placeholder="Ваше ім’я"
+                      required
                     />
                   </div>
                   <div class="wrap-input">
                     <input
-                      type="tel"
+                      type="text"
                       placeholder="Номер телефону"
                       id="phone"
                       name="phone"
-                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                       required
                     />
                   </div>

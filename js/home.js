@@ -155,3 +155,60 @@ accordionBtn.addEventListener("click", () => {
 });
 
 showHideCards(); // Перший рендер
+
+////////////// SENDING FORM /////////////////
+
+const BASE_URL = "https://test-tg-bot-api.onrender.com/";
+
+const form = document.getElementById("form");
+const username = document.getElementById("name");
+const phoneNumber = document.getElementById("phone");
+
+const loadingScreen = document.querySelector(".loadingScreen");
+
+const isFormLoading = (show) => {
+  // треба фн бо код читається тільки раз і якщо не викортстовувати колбек, то лоадер не покажеться
+
+  loadingScreen.style.display = show ? "flex" : "none";
+};
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // email та text бо я ще не налаштував бота
+    const formValues = {
+      email: username.value,
+      text: phoneNumber.value,
+    };
+
+    try {
+      isFormLoading(true);
+
+      const response = await fetch(`${BASE_URL}submit`, {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(formValues),
+      });
+
+      if (response.ok) {
+        isFormLoading(false);
+
+        // alert("Дані відпривилися успішно 🚀 🎉");
+        username.value = "";
+        phoneNumber.value = "";
+      } else {
+        isFormLoading(false);
+
+        // alert("🚨 🚨 🚨 Помилка відправки даних");
+      }
+    } catch (err) {
+      isFormLoading(false);
+
+      console.log(err, "err");
+      // alert("🩺 🩺 🩺 Виникла помилк при відправці форми");
+    } finally {
+      isFormLoading(false);
+    }
+  });
+}
