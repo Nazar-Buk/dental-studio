@@ -10,15 +10,23 @@ if (menu && menuBtn) {
     menu.classList.toggle("active");
     body.classList.toggle("lock");
   });
-}
 
-menu.addEventListener("click", (e) => {
-  if (e.target.classList.contains("nav")) {
-    menuBtn.classList.remove("active");
-    menu.classList.remove("active");
-    body.classList.remove("lock");
-  }
-});
+  menu.addEventListener("click", (e) => {
+    if (e.target.classList.contains("nav")) {
+      menuBtn.classList.remove("active");
+      menu.classList.remove("active");
+      body.classList.remove("lock");
+    }
+  });
+
+  menu.querySelectorAll(".menu__link").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuBtn.classList.remove("active");
+      menu.classList.remove("active");
+      body.classList.remove("lock");
+    });
+  });
+}
 
 ////////////// SWIPER /////////////////
 

@@ -184,6 +184,7 @@
               text-align: center;
               gap: 0;
               margin: 0 auto; // памятай що тут не треба рівняти по центру через флекс!!!
+              width: 100%;
 
               .menu__item {
                 .menu__link {
@@ -191,6 +192,7 @@
                   font-size: clamp(1.438rem, 1.333rem + 0.52vw, 1.75rem);
                   font-weight: 500;
                   padding: 20px 0;
+                  width: 100%;
                 }
               }
             }
