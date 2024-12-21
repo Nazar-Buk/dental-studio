@@ -343,7 +343,8 @@ body {
                 display: flex;
                 gap: clamp(0.875rem, -18.3rem + 26vw, 2.5rem); // 40px
 
-                button {
+                button,
+                a {
                   font-size: 16px;
                   font-family: var(--font-primary);
                   display: flex;

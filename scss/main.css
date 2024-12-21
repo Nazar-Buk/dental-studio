@@ -507,7 +507,8 @@ body main section.services-from .services-form__container .services__form .form_
   display: flex;
   gap: clamp(0.875rem, -18.3rem + 26vw, 2.5rem);
 }
-body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button {
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button,
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns a {
   font-size: 16px;
   font-family: var(--font-primary);
   display: flex;
@@ -515,12 +516,14 @@ body main section.services-from .services-form__container .services__form .form_
   justify-content: center;
   gap: 10px;
 }
-body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button:last-child {
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button:last-child,
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns a:last-child {
   font-weight: 300;
   color: var(--get-btn-color);
   background-color: var(--bg-get-btn);
 }
-body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button:last-child svg {
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button:last-child svg,
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns a:last-child svg {
   fill: var(--get-btn-color);
 }
 body main section.advantages {
@@ -1051,7 +1054,8 @@ body footer.footer .footer__container .footer__right-box .footer__info .footer-i
   body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns {
     flex-direction: column;
   }
-  body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button {
+  body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button,
+  body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns a {
     font-size: 15px;
   }
   body main section.advantages .advantages__container .advantages__content .wrap-content__items {
