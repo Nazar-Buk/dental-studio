@@ -152,6 +152,11 @@ const showHideCards = () => {
 accordionBtn.addEventListener("click", () => {
   isShowMoreCards = !isShowMoreCards; // Перемикаємо стан
   showHideCards(); // Перерендерюємо карточки
+
+  // Якщо приховуємо карточки, прокручуємо до низу контейнера
+  if (!isShowMoreCards) {
+    accordionBtn.scrollIntoView({ block: "end" });
+  }
 });
 
 showHideCards(); // Перший рендер
@@ -163,6 +168,28 @@ const BASE_URL = "https://test-tg-bot-api.onrender.com/";
 const form = document.getElementById("form");
 const username = document.getElementById("name");
 const phoneNumber = document.getElementById("phone");
+const submitBtn = document.getElementById("submit-btn");
+
+const isShowUsernameErrorMsg = document.getElementById("username-error");
+const isShowPhoneNumberErrorMsg = document.getElementById("phone-error");
+
+console.log(isShowUsernameErrorMsg, "isShowUsernameErrorMsg");
+console.log(isShowPhoneNumberErrorMsg, "isShowPhoneNumberErrorMsg");
+
+const phoneRegex = /^[+]?[0-9]{10,15}$/;
+
+const validateForm = () => {
+  const isUsernameValid = username.value.trim() !== "";
+  isShowUsernameErrorMsg.style.display = isUsernameValid ? "none" : "inline";
+
+  const isPhoneValid = phoneRegex.test(phoneNumber.value);
+  isShowPhoneNumberErrorMsg.style.display = isPhoneValid ? "none" : "inline";
+
+  submitBtn.disabled = !(isPhoneValid && isUsernameValid);
+};
+
+username.addEventListener("input", validateForm);
+phoneNumber.addEventListener("input", validateForm);
 
 const loadingScreen = document.querySelector(".loadingScreen");
 

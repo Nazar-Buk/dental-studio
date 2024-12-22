@@ -348,6 +348,7 @@ body {
 
                 .wrap-input {
                   border-bottom: 3px solid var(--input-border-color);
+                  position: relative;
 
                   input {
                     font-size: 16px;
@@ -357,6 +358,20 @@ body {
                     background-color: var(--input-bg);
                     color: var(--input-text-color);
                     padding-left: 2px;
+
+                    &:focus,
+                    &:visited,
+                    &:active {
+                      color: var(--input-text-color);
+                    }
+                  }
+
+                  span {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 130%;
+                    font-size: 12px;
                   }
                 }
               }
@@ -383,6 +398,15 @@ body {
 
                     color: var(--get-btn-color);
                     background-color: var(--bg-get-btn);
+                  }
+                }
+
+                button:disabled {
+                  background-color: var(--bg-disabled);
+
+                  &:hover {
+                    border: var(--cta-btn-border-dark);
+                    color: var(--cta-btn-color-dark);
                   }
                 }
               }
@@ -465,6 +489,7 @@ body {
         .caption {
           color: var(--caption-color-light);
           padding-bottom: clamp(1.875rem, 1.042rem + 4.17vw, 4.375rem); // 70px
+          line-height: 1.3;
         }
 
         .reviews__wrap-cards {
