@@ -137,6 +137,7 @@ a {
   --form-text-color: #fefefe;
   --error-color: #f20000;
   --percent-color: rgba(255, 23, 23, 0.7);
+  --bg-disabled: var(--primary-color);
   --bg-get-btn: #5f5c5c;
   --get-btn-color: var(--secondary-color);
   --header-bg: var(--primary-color);
@@ -250,6 +251,10 @@ input:-webkit-autofill:active {
   background-color: var(--cta-btn-bg-dark);
   color: var(--cta-btn-color-light);
   border: var(--cta-btn-border-light);
+}
+
+.error {
+  color: var(--error-color);
 }
 
 body {
@@ -524,6 +529,7 @@ body main section.services-from .services-form__container .services__form .form_
 }
 body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs .wrap-input {
   border-bottom: 3px solid var(--input-border-color);
+  position: relative;
 }
 body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs .wrap-input input {
   font-size: 16px;
@@ -533,6 +539,16 @@ body main section.services-from .services-form__container .services__form .form_
   background-color: var(--input-bg);
   color: var(--input-text-color);
   padding-left: 2px;
+}
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs .wrap-input input:focus, body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs .wrap-input input:visited, body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs .wrap-input input:active {
+  color: var(--input-text-color);
+}
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs .wrap-input span {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 130%;
+  font-size: 12px;
 }
 body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns {
   display: flex;
@@ -556,6 +572,13 @@ body main section.services-from .services-form__container .services__form .form_
 body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button:last-child svg,
 body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns a:last-child svg {
   fill: var(--get-btn-color);
+}
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button:disabled {
+  background-color: var(--bg-disabled);
+}
+body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button:disabled:hover {
+  border: var(--cta-btn-border-dark);
+  color: var(--cta-btn-color-dark);
 }
 body main section.advantages {
   position: relative;
@@ -617,6 +640,7 @@ body main section.reviews .reviews__container {
 body main section.reviews .reviews__container .caption {
   color: var(--caption-color-light);
   padding-bottom: clamp(1.875rem, 1.042rem + 4.17vw, 4.375rem);
+  line-height: 1.3;
 }
 body main section.reviews .reviews__container .reviews__wrap-cards {
   display: flex;
@@ -1075,7 +1099,11 @@ body footer.footer .footer__container .footer__right-box .footer__info .footer-i
     padding-right: 20px;
     padding-left: 20px;
   }
+  body main section.services-from .services-form__container .services__form .form__wrapper form {
+    gap: 60px;
+  }
   body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-inputs {
+    gap: 40px;
     flex-direction: column;
     width: 100%;
   }
@@ -1084,6 +1112,7 @@ body footer.footer .footer__container .footer__right-box .footer__info .footer-i
   }
   body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns {
     flex-direction: column;
+    gap: 20px;
   }
   body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns button,
   body main section.services-from .services-form__container .services__form .form__wrapper form .wrap-btns a {

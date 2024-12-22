@@ -17,7 +17,7 @@
       <div class="loadingScreen__image">
         <img src="./img/loader01.png" alt="loader" />
       </div>
-      <div>Loading...</div>
+      <div>Почекайте...</div>
     </div>
     <header class="header">
       <div class="header__container">
@@ -239,8 +239,10 @@
                       id="name"
                       name="name"
                       placeholder="Ваше ім’я"
-                      required
                     />
+                    <span id="username-error" class="error"
+                      >Це поле обо'язкове *</span
+                    >
                   </div>
                   <div class="wrap-input">
                     <input
@@ -248,12 +250,20 @@
                       placeholder="Номер телефону"
                       id="phone"
                       name="phone"
-                      required
+                      title="Введіть 10 чисел послідовно"
                     />
+                    <span id="phone-error" class="error"
+                      >Не правильний формат, введіть 10 чисел послідовно *</span
+                    >
                   </div>
                 </div>
                 <div class="wrap-btns">
-                  <button type="submit" class="cta-button cta-button-light">
+                  <button
+                    disabled
+                    id="submit-btn"
+                    type="submit"
+                    class="cta-button cta-button-light"
+                  >
                     Отримати консультацію
                   </button>
                   <a
@@ -512,7 +522,7 @@
             <div id="accordion-btn"></div>
           </a>
           <a href="tel:+611111111112" class="cta-button cta-button-dark"
-            >Залишити відгук</a
+            >Зателефонувати</a
           >
         </div>
       </section>

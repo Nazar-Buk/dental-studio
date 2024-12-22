@@ -843,7 +843,10 @@
 
             .form__wrapper {
               form {
+                gap: 60px;
+
                 .wrap-inputs {
+                  gap: 40px;
                   flex-direction: column;
                   width: 100%;
 
@@ -856,6 +859,7 @@
 
                 .wrap-btns {
                   flex-direction: column;
+                  gap: 20px;
 
                   button,
                   a {
