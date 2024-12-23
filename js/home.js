@@ -173,9 +173,6 @@ const submitBtn = document.getElementById("submit-btn");
 const isShowUsernameErrorMsg = document.getElementById("username-error");
 const isShowPhoneNumberErrorMsg = document.getElementById("phone-error");
 
-console.log(isShowUsernameErrorMsg, "isShowUsernameErrorMsg");
-console.log(isShowPhoneNumberErrorMsg, "isShowPhoneNumberErrorMsg");
-
 const phoneRegex = /^[+]?[0-9]{10,15}$/;
 
 const validateForm = () => {
@@ -222,11 +219,19 @@ if (form) {
         isFormLoading(false);
 
         // alert("Дані відпривилися успішно 🚀 🎉");
+        showPopup(
+          "success",
+          `Заявку відправлено 🤩! ${username.value}, Очікуйте дзвінка менеджера`
+        );
         username.value = "";
         phoneNumber.value = "";
+        submitBtn.disabled = true;
       } else {
         isFormLoading(false);
-
+        showPopup(
+          "failed",
+          "Упс 🫤. Помилка відправки даних. Спробуйте пізніше"
+        );
         // alert("🚨 🚨 🚨 Помилка відправки даних");
       }
     } catch (err) {
@@ -234,8 +239,124 @@ if (form) {
 
       console.log(err, "err");
       // alert("🩺 🩺 🩺 Виникла помилк при відправці форми");
+      showPopup(
+        "failed",
+        `🩺 🩺 🩺 Виникла помилк при відправці форми. ${err}`
+      );
     } finally {
       isFormLoading(false);
     }
   });
 }
+
+////////////// SHOW POPUP /////////////////
+
+//треба для тесту
+// const notificationButtons = document.querySelectorAll(".notification__btn");
+
+const notificationBox = document.querySelector(".notification");
+
+// exampe how to use showPopup(type, msg)
+//  showPopup("success", "Here is success message");
+
+const showPopup = (type, msg) => {
+  let popupType;
+  const notificationPopup = document.createElement("div");
+
+  if (type === "success") {
+    notificationPopup.classList.add("success");
+
+    popupType = ` <i class="fa-solid fa-circle-check success "></i>
+        <p>${msg}</p>
+        <div class="notification-popup___close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>`;
+  } else if (type === "failed") {
+    notificationPopup.classList.add("error");
+
+    popupType = ` <i class="fa-solid fa-circle-xmark error"></i>
+        <p>${msg}</p>
+        <div class="notification-popup___close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>`;
+  } else if (type === "warning") {
+    notificationPopup.classList.add("warning");
+
+    popupType = ` <i class="fa-solid fa-triangle-exclamation warning"></i>
+        <p>${msg}</p>
+        <div class="notification-popup___close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>`;
+  } else if (type === "info") {
+    notificationPopup.classList.add("info");
+
+    popupType = ` <i class="fa-solid fa-circle-info info"></i>
+        <p>${msg}</p>
+        <div class="notification-popup___close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>`;
+  }
+
+  notificationPopup.classList.add("notification__popup");
+  notificationPopup.innerHTML = popupType;
+  notificationBox.appendChild(notificationPopup);
+
+  let timeoutId;
+  let startTime = Date.now();
+  let remainingTime = 6000;
+
+  const startTimer = () => {
+    timeoutId = setTimeout(() => {
+      notificationPopup.remove();
+    }, remainingTime);
+  };
+
+  startTimer();
+
+  // Зупиняємо таймер при наведенні миші
+  notificationPopup.addEventListener("mouseenter", () => {
+    clearTimeout(timeoutId); // Зупиняємо таймер
+    remainingTime -= Date.now() - startTime; // Вираховуємо скільки часу залишилось
+    // remainingTime - теперішня дата - початкова дата створення поп-апчика
+  });
+
+  // Знову запускаємо таймер при відведенні миші
+  notificationPopup.addEventListener("mouseleave", () => {
+    startTime = Date.now(); // Перезаписуємо початкову дату
+    startTimer(); // Запускаємо таймер
+  });
+
+  notificationPopup
+    .querySelector(".notification-popup___close")
+    .addEventListener("click", () => {
+      clearTimeout(timeoutId); // Зупиняємо таймер
+      notificationPopup.remove(); // видаляє конкретний попап, бо це знаходиться в  функції що робить попапи
+    });
+};
+
+// треба для тесту поп-ап повідомлень
+// notificationButtons.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     if (button.id === "success") {
+//       showPopup("success", "Заявку відправлено 🤩! Очікуйте дзвінка менеджера");
+//     }
+
+//     if (button.id === "failed") {
+//       showPopup("failed", "Упс 🫤, щось пішло не так. Спробуйте пізніше");
+//     }
+
+//     if (button.id === "warning") {
+//       showPopup(
+//         "warning",
+//         "Увага! Тут буде повідомлення, але я ще не придумав яке саме 🤭"
+//       );
+//     }
+
+//     if (button.id === "info") {
+//       showPopup(
+//         "info",
+//         "Інформація! Тут буде повідомлення, але я ще не придумав яке саме 😉"
+//       );
+//     }
+//   });
+// });
